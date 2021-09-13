@@ -27,7 +27,34 @@ createConnection().then((db) => {
   app.post("/api/products/add", async (req: Request, res: Response) => {
     const createdProduct = await productRepository.create(req.body);
     const result = await productRepository.save(createdProduct);
-    res.json(result);
+    return res.json(result);
+  });
+
+  // get particular product
+  app.get("/api/products/:id", async (req: Request, res: Response) => {
+    const product = await productRepository.findOne(req.params.id);
+    return res.send(product);
+  });
+
+  // UPDATE product
+  app.put("/api/products/:id", async (req: Request, res: Response) => {
+    productRepository.update(req.params.id, req.body);
+    const updatedContact = await productRepository.findOne(req.params.id);
+    return res.send(updatedContact);
+  });
+
+  // DELETE product
+  app.delete("/api/products/:id", async (req: Request, res: Response) => {
+    const result = await productRepository.delete(req.params.id);
+    return res.send(result);
+  });
+
+  // like a product from main-service
+  app.post("/api/products/:id/like", async (req: Request, res: Response) => {
+    const product = await productRepository.findOneOrFail(req.params.id);
+    product.likes++;
+    const result = await productRepository.save(product);
+    return res.send(result);
   });
 
   app.listen(5000, () => {
