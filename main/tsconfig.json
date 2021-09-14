@@ -11,7 +11,6 @@
     "rootDir": "./src",
     "moduleResolution": "node",
     "module": "commonjs" /* Specify what module code is generated. */ /* Disallow `import`s, `require`s or `<reference>`s from expanding the number of files TypeScript should add to a project. */,
-    "outDir": "./dist" /* Specify an output folder for all emitted files. */,
-    "skipLibCheck": true /* Skip type checking all .d.ts files. */
+    "outDir": "./dist" /* Specify an output folder for all emitted files. */
   }
 }

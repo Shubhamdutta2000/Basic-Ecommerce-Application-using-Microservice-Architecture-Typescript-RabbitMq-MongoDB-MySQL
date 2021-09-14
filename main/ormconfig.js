@@ -1,5 +1,4 @@
 const secret = require('./dist/config').default
-
 const config = {
   type: "mongodb",
   url: secret.databaseURL,
