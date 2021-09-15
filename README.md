@@ -1,4 +1,4 @@
-# Basic-Ecommerce-Application-using-Microservice-Architecture-Node-Js-RabbitMq-MongoDB-MySQL
+# Basic-Ecommerce-Application-using-Microservice-Architecture-Node-Js-RabbitMq
 
 ## Full Architecture
 
@@ -15,6 +15,8 @@
 | GET `/api/products/:id`    | Get a single product    |
 | PUT `/api/products/:id`    | Update a single product |
 | DELETE `/api/products/:id` | Delete a single product |
+
+<br />
 
 - ### Main Service
 
