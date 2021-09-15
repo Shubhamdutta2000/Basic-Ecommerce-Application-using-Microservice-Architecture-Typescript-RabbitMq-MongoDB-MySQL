@@ -4,9 +4,9 @@ const config = {
   url: secret.databaseURL,
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  entities: ["dist/entities/*.js"],
+  entities: ["dist/entity/*.js"],
   logging: true,
   synchronize: true,
-  cli: { entitiesDir: "src/entities" }
+  cli: { entitiesDir: "src/entity" }
 }
 module.exports = config;

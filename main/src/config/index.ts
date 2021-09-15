@@ -1,13 +1,11 @@
 import * as dotenv from "dotenv";
 
-process.env.NODE_ENV = process.env.NODE_ENV || "development";
-
 dotenv.config();
 
-const MONGO_URL = process.env.MONGODB_URI;
+let databaseUrl = process.env.MONGODB_URI;
 
 export default {
-  databaseURL: MONGO_URL,
-  port: process.env.PORT || 5001,
+  databaseURL: databaseUrl,
+  port: process.env.PORT || 5000,
   rabbitmqUrl: process.env.RABBITMQ_URL,
 };
