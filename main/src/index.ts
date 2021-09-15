@@ -87,6 +87,14 @@ createConnection().then((db) => {
         { noAck: true }
       );
 
+      // routes
+
+      // route for getting all products
+      app.get("/api/products/all", async (req: Request, res: Response) => {
+        const products = await productRepository.find();
+        res.send(products);
+      });
+
       // route for product like and increase like count in admin section
       app.post(
         "/api/products/:id/like",
