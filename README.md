@@ -24,3 +24,8 @@
 | ----------------------------- | ------------------------------- |
 | GET `/api/products`           | Get all the products            |
 | POST `/api/products/:id/like` | Like or upvote a single product |
+
+<br />
+
+## License Used
+- MIT License
